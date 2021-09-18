@@ -7,6 +7,9 @@ public class main {
 		
 		// 203913 ¼Û¹Î¼±
 		System.out.println("2021-09-16 AM 12:29 ¼Û¹Î¼± ¼öÁ¤ ");
+		
+		// 204408 ±è¼º¾Æ
+	    System.out.println("2021-09-16 AM 09:20 ±è¼º¾Æ ¼öÁ¤ ");
 		new MainFrame();
 	}
 
