@@ -15,4 +15,4 @@
 * Swing을 이용한 코드들을 조금 더 숙지
 * 기본 일주일마다 회의를 통해 수정, 보완할 점 체크 후 진행할 예정
 
-https://user-images.githubusercontent.com/83965377/135941527-47f0d5bd-5acd-4d60-a779-cf33c121fdba.PNG
+![TEAM-N](https://user-images.githubusercontent.com/83965377/135941527-47f0d5bd-5acd-4d60-a779-cf33c121fdba.PNG)
