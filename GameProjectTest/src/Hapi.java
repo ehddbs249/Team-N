@@ -1,5 +1,4 @@
 
-
 public class Hapi extends Monster {
 	public Hapi() {
 		this.mobName = "Hapi";

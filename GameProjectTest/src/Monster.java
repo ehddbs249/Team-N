@@ -1,11 +1,12 @@
+
 import java.util.Random;
 
 import javax.swing.JOptionPane;
 
 public abstract class Monster {
 	Random r = new Random();
-	String mobName;
-	int hp =0; //체력
+	public String mobName;
+	public int hp =0; //체력
 	int recovery = 0; // 체력 재생 
 	int atk = 0; // 공격력
 	int def = 0; // 방어력
