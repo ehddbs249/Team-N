@@ -32,8 +32,9 @@ public abstract class Monster {
 		return 0;
 	};
 	
-	public void hp_check() {
-		System.out.println(this.mobName+"의 체력은"+this.hp+"입니다.");
+	public String hp_check() {
+		String a = this.mobName+"의 체력은"+this.hp+"입니다.";
+		return a;
 	}
 	public void recovey_hp() {
 		this.hp += this.recovery;

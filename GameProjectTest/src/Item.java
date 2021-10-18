@@ -1,12 +1,4 @@
-
-
 public abstract class Item {
-	
-	
 	String name; // 아이템 이름
-	int hp; // 체력
-	int atk; // 공격력
-	int def; // 방어력
-	
-	
+	int Sell_Money; // 판매 요금
 }
