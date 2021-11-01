@@ -1,9 +1,5 @@
 package monster.map;
 
-import monster.MainFrame;
-import monster.character.*;
-import monster.item.*;
-
 import java.awt.Image;
 import java.awt.TextArea;
 
@@ -12,11 +8,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
-public class battleMap extends JFrame{
+import monster.character.Boss;
+import monster.character.Monster;
+import monster.character.Player;
+
+public class BossbattleMap extends JFrame{
 	String bsText = null;
-	public battleMap(Player p, Monster m,int i) {
+	public BossbattleMap(Player p, Boss m,int i) {
 		
 		
 		JFrame frm = new JFrame("Monster");
@@ -189,7 +188,11 @@ public class battleMap extends JFrame{
 							p.levelUp();
 						}
 						m.setHp(m.getMaxHp());
+						
+						new Town2(p);
 						frm.dispose();
+						
+						
 					}
 				}
 			});

@@ -1,7 +1,6 @@
 package monster.map;
 
 import java.awt.Graphics;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -9,7 +8,6 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
@@ -19,38 +17,12 @@ import monster.character.Player;
 import monster.item.HpPotion;
 import monster.item.MpPotion;
 
-public class Town1 extends JFrame{
+public class Town2 extends JFrame{
 	ImageIcon icon;
 	JScrollPane scrollPane;
 	
-	public Town1(String playerName) {
+	public Town2(Player player) {
 		int Dday = 10;
-		Player player = new Player(//사용자 케릭터 객체 초기화
-                playerName,
-                150, 
-                150,
-                50,
-                50,
-                20,//150
-                2,//100
-                1000,//10000
-                0,
-                100,//300
-                1,
-                "에너지볼",
-                null,
-                null,
-                new Skill("스킬1", 1, 200, 2000),
-                new ArrayList<>(),
-                new ArrayList<>(),
-                new ArrayList<HpPotion>(),
-                new ArrayList<HpPotion>(),
-                new ArrayList<HpPotion>(),
-                new ArrayList<MpPotion>(),
-                new ArrayList<MpPotion>(),
-                new ArrayList<MpPotion>(),
-                10
-        );
 		
 		HpPotion smallHpItem =new HpPotion("작은체력물약",50,30);
 		HpPotion NormalHpItem =new HpPotion("보통체력물약",100,100);
@@ -75,36 +47,20 @@ public class Town1 extends JFrame{
 		};
 		
 		
-		
-		
 		 JButton hunt_btn = new JButton("사냥터");
 	     background.add(hunt_btn);
 	     hunt_btn.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(player.getDayCount()>0) {
 						new hunting_ground(player);
-					} else if(player.getDayCount()==0) {
-						new BossbattleMap(player, Champion_Goblin, 10);
 					} else {
-						player.setDayCount(0);
+						new battleMap(player, Champion_Goblin,11);
 					}
-						
 					
-					
-				}
-			});
-	     
-	     JButton Status = new JButton("상태창");
-	     background.add(Status);
-	     Status.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					new monster.Status(player);
 				}
 			});
 	     scrollPane = new JScrollPane(background);
 	     setContentPane(scrollPane);
-	     
-	     
 		
 		
 		

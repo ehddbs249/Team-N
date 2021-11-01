@@ -23,6 +23,8 @@ public class Player extends Character {
     private List<MpPotion> lowMpPotions;
     private List<MpPotion> midMpPotions;
     private List<MpPotion> highMpPotions;
+    
+    private int DayCount;
 
 
 
@@ -48,7 +50,8 @@ public class Player extends Character {
                       List<HpPotion> highHpPotions,
                       List<MpPotion> lowMpPotions,
                       List<MpPotion> midMpPotions,
-                      List<MpPotion> highMpPotions) {
+                      List<MpPotion> highMpPotions,
+                      int DayCount) {
         super(name, hp, maxhp, strength, defense, money, exp, level, defaultAttackName);
         this.mp = mp;
         this.maxMp = maxMp;
@@ -64,6 +67,7 @@ public class Player extends Character {
         this.lowMpPotions = lowMpPotions;
         this.midMpPotions = midMpPotions;
         this.highMpPotions = highMpPotions;
+        this.DayCount = DayCount;
     }
 
     
@@ -305,6 +309,14 @@ public class Player extends Character {
 
     public void setHighMpPotions(List<MpPotion> highMpPotions) {
         this.highMpPotions = highMpPotions;
+    }
+    
+    public void setDayCount(int DayCount) {
+    	this.DayCount = DayCount;
+    }
+    
+    public int getDayCount() {
+    	return DayCount;
     }
     
     

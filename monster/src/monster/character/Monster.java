@@ -37,7 +37,7 @@ public class Monster extends Character {
         double moneyDropPercentage = 0.1 * (random.nextInt(3) + 8);
         
         player.setMoney((int) (player.getMoney() + this.money * moneyDropPercentage));
-        
+        player.setExp((int)(player.getExp()+this.exp));
         for (int i = 0; i < potionDropCount; i++) {
         	
             if (this.hpPotion.getName().equals("작은체력물약")) {

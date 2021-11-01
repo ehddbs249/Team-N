@@ -39,10 +39,12 @@ public class hunting_ground extends JFrame{
 	
 	Monster Baby_Dragon  = new Monster("Baby_Dragon", 2500, 2500, 150, 70, 2500, 1500, 10, "¹°±â",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
 	
-	public hunting_ground(Player player) {
 	
+	
+	
+	public hunting_ground(Player player) {
 		
-		
+	
 		JFrame frm = new JFrame("Hunting_Ground");
 		
 		frm.setSize(300,300);
@@ -79,52 +81,72 @@ public class hunting_ground extends JFrame{
 		
 		stage1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				player.setDayCount(player.getDayCount()-1);
 				new battleMap(player, Blue_Wolf,1);
+				frm.dispose();
 			}
 		});
 		stage2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				player.setDayCount(player.getDayCount()-1);
 				new battleMap(player, Red_Wolf,2);
+				frm.dispose();
 			}
 		});
 		stage3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				player.setDayCount(player.getDayCount()-1);
 				new battleMap(player, Bear,3);
+				frm.dispose();
 			}
 		});
 		stage4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				player.setDayCount(player.getDayCount()-1);
 				new battleMap(player, Zombie,4);
+				frm.dispose();
 			}
 		});
 		stage5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				player.setDayCount(player.getDayCount()-1);
 				new battleMap(player, Ribbon_Pig,5);
+				frm.dispose();
 			}
 		});
 		stage6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				player.setDayCount(player.getDayCount()-1);
 				new battleMap(player, Goblin,6);
+				frm.dispose();
 			}
 		});
 		stage7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				player.setDayCount(player.getDayCount()-1);
 				new battleMap(player, Goblin_Hop,7);
+				frm.dispose();
 			}
 		});
 		stage8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				player.setDayCount(player.getDayCount()-1);
 				new battleMap(player, Skeleton,8);
+				frm.dispose();
 			}
 		});
 		stage9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				player.setDayCount(player.getDayCount()-1);
 				new battleMap(player, Hapi,9);
+				frm.dispose();
 			}
 		});
 		stage10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				player.setDayCount(player.getDayCount()-1);
 				new battleMap(player, Baby_Dragon,10);
+				frm.dispose();
 			}
 		});
 		

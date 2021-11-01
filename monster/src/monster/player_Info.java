@@ -58,6 +58,7 @@ public class player_Info extends JFrame{
 				
 				frm.setVisible(false);
 				
+				
 			}
 		});
 		Nextbtn.setBounds(213,293,138,35);
