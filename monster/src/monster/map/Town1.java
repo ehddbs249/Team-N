@@ -53,6 +53,7 @@ public class Town1 extends JFrame{
 		
 		icon = new ImageIcon("background.png");
 		
+		
 		JPanel background = new JPanel() {
 			public void paintComponent(Graphics g) {
 				g.drawImage(icon.getImage(), 0,0,null);
@@ -60,6 +61,7 @@ public class Town1 extends JFrame{
 				super.paintComponent(g);
 			}
 		};
+		
 		
 		 JButton hunt_btn = new JButton("ªÁ≥…≈Õ");
 	     background.add(hunt_btn);

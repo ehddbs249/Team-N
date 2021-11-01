@@ -11,6 +11,7 @@ public class Monster extends Character {
 
    public Monster(String name,double hp,double maxhp,double strength, double defense, int money, int exp, int level, String defaultAttackName, HpPotion hpPotion, MpPotion mpPotion) {
 	   super(name, hp, maxhp, strength, defense, money, exp, level, defaultAttackName);
+	   
        this.hpPotion = hpPotion;
        this.mpPotion = mpPotion;
    }
@@ -19,10 +20,13 @@ public class Monster extends Character {
     public int attack(Character target) {
         Random random = new Random();
         double percentage = 0.1 * (random.nextInt(3) + 8);//80~100%데미지
+        
         int damage = 0;
+        
         if(this.strength > target.getDefense()) {
             damage = (int) ((int) (this.strength - target.getDefense()) * percentage);
         }
+        
         target.setHp(target.getHp() - damage);
         return damage;
     }
@@ -31,8 +35,11 @@ public class Monster extends Character {
         Random random = new Random();
         int potionDropCount = random.nextInt(5) + 1;
         double moneyDropPercentage = 0.1 * (random.nextInt(3) + 8);
+        
         player.setMoney((int) (player.getMoney() + this.money * moneyDropPercentage));
+        
         for (int i = 0; i < potionDropCount; i++) {
+        	
             if (this.hpPotion.getName().equals("작은체력물약")) {
                 player.getLowHpPotions().add(this.hpPotion);
                 player.getLowMpPotions().add(this.mpPotion);
@@ -43,27 +50,32 @@ public class Monster extends Character {
                 player.getHighHpPotions().add(this.hpPotion);
                 player.getHighMpPotions().add(this.mpPotion);
             }
+            
         }
+        
         return potionDropCount;
     }
 
+    
     public HpPotion getHpPotion() {
         return hpPotion;
     }
 
+    
     public void setHpPotion(HpPotion hpPotion) {
         this.hpPotion = hpPotion;
     }
 
+    
     public MpPotion getMpPotion() {
         return mpPotion;
     }
 
+    
     public void setMpPotion(MpPotion mpPotion) {
         this.mpPotion = mpPotion;
     }
 
-    
     
 
 }

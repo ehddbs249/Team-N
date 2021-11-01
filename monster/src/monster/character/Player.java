@@ -66,6 +66,8 @@ public class Player extends Character {
         this.highMpPotions = highMpPotions;
     }
 
+    
+    
     @Override
     public int attack(Character target) {
         Random random = new Random();
@@ -78,6 +80,8 @@ public class Player extends Character {
         return damage;
     }
 
+    
+    
     public int useSkill(Skill skill, Character target) {
         Random random = new Random();
         double percentage = 0.1 * (random.nextInt(5) + 6);//60~100%데미지
@@ -88,6 +92,8 @@ public class Player extends Character {
         target.setHp(target.getHp() - damage);
         return damage;
     }
+    
+    
     
     public void levelUp() {
         this.level++;
@@ -102,12 +108,15 @@ public class Player extends Character {
     }
 
 
+    
+    
     public void buyItem(Item item) {
         if(item instanceof Weapon) {
             Weapon weapon = (Weapon) item;
             this.weapons.add(weapon);//무기 추가
             this.money -= weapon.getPrice();//돈 차감
         }
+        
         else if(item instanceof Armor) {
             Armor armor = (Armor) item;
             this.armors.add(armor);//방어구 추가
@@ -115,6 +124,8 @@ public class Player extends Character {
         }
     }
 
+    
+    
     public void buyItem(Item item, int count, String grade) {
         if(item instanceof HpPotion) {
             HpPotion hpPotion = (HpPotion) item;
@@ -134,6 +145,7 @@ public class Player extends Character {
                 }
             }
         }
+        
         else if(item instanceof MpPotion) {
             MpPotion mpPotion = (MpPotion) item;
             if(grade.equals("low")) {
@@ -161,34 +173,42 @@ public class Player extends Character {
         return mp;
     }
 
+    
     public void setMp(double mp) {
         this.mp = mp;
     }
 
+    
     public double getMaxMp() {
         return maxMp;
     }
 
+    
     public void setMaxMp(double maxMp) {
         this.maxMp = maxMp;
     }
+    
 
     public int getMaxExp() {
         return maxExp;
     }
 
+    
     public void setMaxExp(int maxExp) {
         this.maxExp = maxExp;
     }
 
+    
     public Weapon getWeapon() {
         return weapon;
     }
 
+    
     public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
     }
 
+    
     public Armor getArmor() {
         return armor;
     }
@@ -197,75 +217,95 @@ public class Player extends Character {
         this.armor = armor;
     }
 
+    
     public Skill getSkill() {
         return skill;
     }
+    
 
     public void setSkill(Skill skill) {
         this.skill = skill;
     }
+    
 
     public List<Weapon> getWeapons() {
         return weapons;
     }
+    
 
     public void setWeapons(List<Weapon> weapons) {
         this.weapons = weapons;
     }
+    
 
     public List<Armor> getArmors() {
         return armors;
     }
+    
 
     public void setArmors(List<Armor> armors) {
         this.armors = armors;
     }
 
+    
     public List<HpPotion> getLowHpPotions() {
         return lowHpPotions;
     }
 
+    
     public void setLowHpPotions(List<HpPotion> lowHpPotions) {
         this.lowHpPotions = lowHpPotions;
     }
 
+    
     public List<HpPotion> getMidHpPotions() {
         return midHpPotions;
     }
 
+    
     public void setMidHpPotions(List<HpPotion> midHpPotions) {
         this.midHpPotions = midHpPotions;
     }
 
+    
     public List<HpPotion> getHighHpPotions() {
         return highHpPotions;
     }
 
+    
     public void setHighHpPotions(List<HpPotion> highHpPotions) {
         this.highHpPotions = highHpPotions;
     }
+    
 
     public List<MpPotion> getLowMpPotions() {
         return lowMpPotions;
     }
+    
 
     public void setLowMpPotions(List<MpPotion> lowMpPotions) {
         this.lowMpPotions = lowMpPotions;
     }
+    
 
     public List<MpPotion> getMidMpPotions() {
         return midMpPotions;
     }
+    
 
     public void setMidMpPotions(List<MpPotion> midMpPotions) {
         this.midMpPotions = midMpPotions;
     }
+    
 
     public List<MpPotion> getHighMpPotions() {
         return highMpPotions;
     }
+    
 
     public void setHighMpPotions(List<MpPotion> highMpPotions) {
         this.highMpPotions = highMpPotions;
     }
+    
+    
 }

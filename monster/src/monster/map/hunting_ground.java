@@ -23,18 +23,24 @@ public class hunting_ground extends JFrame{
 	
 	Monster Blue_Wolf = new Monster("Blue_Wolf", 100, 100, 10, 0, 100, 100, 1, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
 	Monster Red_Wolf = new Monster("Red_Wolf", 200, 200, 15, 0, 200, 200, 2, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	
 	Monster Bear = new Monster("Bear", 370, 370, 26, 5, 400, 250, 3, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	
 	Monster Zombie = new Monster("Zombie", 600, 600, 38, 5, 700, 560, 4, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	
+	
 	Monster Ribbon_Pig = new Monster("Ribbon_Pig", 780, 780, 56, 10, 1000, 780, 5, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
 	Monster Goblin= new Monster("Goblin", 1000, 1000, 78, 16, 1500, 900, 6, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	
 	Monster Goblin_Hop = new Monster("Goblin_Hop", 1270, 1270, 100, 26, 1700, 1100, 7, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	
 	Monster Skeleton  = new Monster("Skeleton", 1670, 1670, 120, 36, 2000, 1300, 8, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
 	Monster Hapi = new Monster("Hapi", 2100, 2100, 140, 58, 2200, 1400, 9, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	
 	Monster Baby_Dragon  = new Monster("Baby_Dragon", 2500, 2500, 150, 70, 2500, 1500, 10, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
 	
 	public hunting_ground(Player player) {
 	
-		
 		
 		
 		JFrame frm = new JFrame("Hunting_Ground");
@@ -73,52 +79,52 @@ public class hunting_ground extends JFrame{
 		
 		stage1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new battleMap(player, Blue_Wolf);
+				new battleMap(player, Blue_Wolf,1);
 			}
 		});
 		stage2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new battleMap(player, Red_Wolf);
+				new battleMap(player, Red_Wolf,2);
 			}
 		});
 		stage3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new battleMap(player, Bear);
+				new battleMap(player, Bear,3);
 			}
 		});
 		stage4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new battleMap(player, Zombie);
+				new battleMap(player, Zombie,4);
 			}
 		});
 		stage5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new battleMap(player, Ribbon_Pig);
+				new battleMap(player, Ribbon_Pig,5);
 			}
 		});
 		stage6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new battleMap(player, Goblin);
+				new battleMap(player, Goblin,6);
 			}
 		});
 		stage7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new battleMap(player, Goblin_Hop);
+				new battleMap(player, Goblin_Hop,7);
 			}
 		});
 		stage8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new battleMap(player, Skeleton);
+				new battleMap(player, Skeleton,8);
 			}
 		});
 		stage9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new battleMap(player, Hapi);
+				new battleMap(player, Hapi,9);
 			}
 		});
 		stage10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new battleMap(player, Baby_Dragon);
+				new battleMap(player, Baby_Dragon,10);
 			}
 		});
 		
