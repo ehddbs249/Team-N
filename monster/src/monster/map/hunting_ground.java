@@ -128,6 +128,12 @@ public class hunting_ground extends JFrame{
 			}
 		});
 		
+		Undo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frm.dispose();
+			}
+		});
+		
 		frm.getContentPane().add(stage1);
 		frm.getContentPane().add(stage2);
 		frm.getContentPane().add(stage3);

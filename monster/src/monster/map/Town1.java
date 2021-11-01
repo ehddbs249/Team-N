@@ -24,11 +24,11 @@ public class Town1 extends JFrame{
 		
 		Player player = new Player(//사용자 케릭터 객체 초기화
                 playerName,
-                100,
-                100,
+                150, 
+                150,
                 50,
                 50,
-                10,//150
+                20,//150
                 2,//100
                 1000,//10000
                 0,

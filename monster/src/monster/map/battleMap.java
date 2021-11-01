@@ -78,21 +78,25 @@ public class battleMap extends JFrame{
 		JLabel playerName = new JLabel();
 		JLabel playerHp = new JLabel();
 		JLabel playerLevel = new JLabel();
+		JLabel playerMp = new JLabel();
 		
 		
-		playerName.setBounds(30,200,274,50);
-		playerHp.setBounds(30,230,274,50);
-		playerLevel.setBounds(30,215,274,50);
+		playerName.setBounds(30,186,274,50);
+		playerHp.setBounds(30,215,274,50);
+		playerLevel.setBounds(30,200,274,50);
+		playerMp.setBounds(30,230,274,50);
 		
 		
 		playerName.setText("Name : "+p.getName());
 		playerLevel.setText("Level : "+p.getLevel());
 		playerHp.setText("Hp : "+p.getHp()+" / "+p.getMaxHp());
+		playerMp.setText("Mp : "+p.getMp()+" / "+p.getMaxMp());
 		
 		
 		frm.getContentPane().add(playerHp);
 		frm.getContentPane().add(playerLevel);
 		frm.getContentPane().add(playerName);
+		frm.getContentPane().add(playerMp);
 		frm.getContentPane().add(Inven);
 		
 		
