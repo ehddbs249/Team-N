@@ -77,18 +77,24 @@ public class battleMap extends JFrame{
 		JLabel playerHp = new JLabel();
 		JLabel playerLevel = new JLabel();
 		JLabel playerMp = new JLabel();
+		JLabel playerStr = new JLabel();
+		JLabel playerDef = new JLabel();
 		
 		
 		playerName.setBounds(30,186,274,50);
 		playerHp.setBounds(30,215,274,50);
 		playerLevel.setBounds(30,200,274,50);
 		playerMp.setBounds(30,230,274,50);
+		playerStr.setBounds(150, 215, 274, 50);
+		playerDef.setBounds(150, 200, 274, 50);
 		
 		
 		playerName.setText("Name : "+p.getName());
 		playerLevel.setText("Level : "+p.getLevel());
 		playerHp.setText("Hp : "+p.getHp()+" / "+p.getMaxHp());
 		playerMp.setText("Mp : "+p.getMp()+" / "+p.getMaxMp());
+		playerStr.setText("Strength : "+p.getStrength());
+		playerDef.setText("Defense : "+p.getDefense());
 		
 		
 		frm.getContentPane().add(playerHp);
@@ -96,6 +102,8 @@ public class battleMap extends JFrame{
 		frm.getContentPane().add(playerName);
 		frm.getContentPane().add(playerMp);
 		frm.getContentPane().add(Inven);
+		frm.getContentPane().add(playerDef);
+		frm.getContentPane().add(playerStr);
 		
 		
 		// 이미지
@@ -197,11 +205,36 @@ public class battleMap extends JFrame{
 			
 			ski_btn1.addActionListener(evnet ->{
 				
-				p.useSkill(p.getSkill(), m);
-				monsterHp.setText("Hp : "+m.getHp()+" / "+m.getMaxHp());
-				
-				m.attack(p);
-				playerHp.setText("Hp : "+p.getHp()+" / "+p.getMaxHp());
+				if((p.getHp()>0||m.getHp()>0)&&(p.getMp()>p.getSkill().getMp())) {
+					p.setMp(p.getMp()-p.getSkill().getMp());
+					
+					p.useSkill(p.getSkill(), m);
+					bs.append("\n"+p.getName()+"가 "+ m.getName() + "에게" + String.valueOf(p.attack(m))+"의 피해를 입혔습니다.\n");
+					monsterHp.setText("Hp : "+m.getHp()+" / "+m.getMaxHp());
+					
+					
+					if(m.getHp()>0) {
+						m.attack(p);
+						bs.append(m.getName()+"가 "+ p.getName() + "에게" + String.valueOf(m.attack(p))+"의 피해를 입혔습니다.\n");
+						playerHp.setText("Hp : "+p.getHp()+" / "+p.getMaxHp());
+						if(p.getHp()<1) {
+							JOptionPane.showMessageDialog(null, "패배");
+							System.exit(0);
+						}
+					}else {
+						JOptionPane.showMessageDialog(null, "승리");
+						
+						int potionDropCount = m.dropItem(p);
+						if(p.getExp()>=p.getMaxExp()) {
+							p.levelUp();
+						}
+						m.setHp(m.getMaxHp());
+						frm.dispose();
+					}
+				} else {
+					JOptionPane.showMessageDialog(null, "마나 없음");
+				}
+				playerMp.setText("Mp : "+p.getMp()+" / "+p.getMaxMp());
 			});
 			
 			

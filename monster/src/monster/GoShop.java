@@ -97,7 +97,7 @@ public class GoShop {
 			}
 		});BuyStrPotion2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(player.getMoney()>300) {
+				if(player.getMoney()>1000) {
 					player.setMoney(player.getMoney()-1000);
 					player.setStrength(player.getStrength()*1.8);
 				}
@@ -105,7 +105,7 @@ public class GoShop {
 			}
 		});BuyStrPotion3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(player.getMoney()>300) {
+				if(player.getMoney()>5000) {
 					player.setMoney(player.getMoney()-5000);
 					player.setStrength(player.getStrength()*3.0);
 				}
