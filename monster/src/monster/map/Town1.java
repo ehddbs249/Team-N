@@ -101,6 +101,14 @@ public class Town1 extends JFrame{
 					new monster.Status(player);
 				}
 			});
+	     
+	     JButton Shop = new JButton("ªÛ¡°");
+	     background.add(Shop);
+	     Shop.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					new monster.GoShop(player);
+				}
+			});
 	     scrollPane = new JScrollPane(background);
 	     setContentPane(scrollPane);
 	     

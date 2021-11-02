@@ -136,16 +136,19 @@ public class Player extends Character {
             if(grade.equals("low")) {
                 for(int i = 0; i < count; i ++) {
                     this.lowHpPotions.add(hpPotion);
+                    this.money -= hpPotion.getPrice();
                 }
             }
             else if(grade.equals("mid")) {
                 for(int i = 0; i < count; i ++) {
                     this.midHpPotions.add(hpPotion);
+                    this.money -= hpPotion.getPrice();
                 }
             }
             else if(grade.equals("high")) {
                 for(int i = 0; i < count; i ++) {
                     this.highHpPotions.add(hpPotion);
+                    this.money -= hpPotion.getPrice();
                 }
             }
         }
@@ -155,16 +158,19 @@ public class Player extends Character {
             if(grade.equals("low")) {
                 for(int i = 0; i < count; i ++) {
                     this.lowMpPotions.add(mpPotion);
+                    this.money -= mpPotion.getPrice();
                 }
             }
             else if(grade.equals("mid")) {
                 for(int i = 0; i < count; i ++) {
                     this.midMpPotions.add(mpPotion);
+                    this.money -= mpPotion.getPrice();
                 }
             }
             else if(grade.equals("high")) {
                 for(int i = 0; i < count; i ++) {
                     this.highMpPotions.add(mpPotion);
+                    this.money -= mpPotion.getPrice();
                 }
             }
         }

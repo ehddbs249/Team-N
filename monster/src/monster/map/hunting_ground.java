@@ -22,22 +22,22 @@ public class hunting_ground extends JFrame{
 	MpPotion BigMpItem = new MpPotion("큰마나물약", 300, 40);
 	
 	Monster Blue_Wolf = new Monster("Blue_Wolf", 100, 100, 10, 0, 100, 100, 1, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
-	Monster Red_Wolf = new Monster("Red_Wolf", 200, 200, 15, 0, 200, 200, 2, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	Monster Red_Wolf = new Monster("Red_Wolf", 400, 400, 40, 0, 200, 200, 2, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
 	
-	Monster Bear = new Monster("Bear", 370, 370, 26, 5, 400, 250, 3, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	Monster Bear = new Monster("Bear", 650, 650, 120, 50, 400, 600, 3, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
 	
-	Monster Zombie = new Monster("Zombie", 600, 600, 38, 5, 700, 560, 4, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	Monster Zombie = new Monster("Zombie", 1250, 1250, 260, 100, 1000, 1000, 4, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
 	
 	
-	Monster Ribbon_Pig = new Monster("Ribbon_Pig", 780, 780, 56, 10, 1000, 780, 5, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
-	Monster Goblin= new Monster("Goblin", 1000, 1000, 78, 16, 1500, 900, 6, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	Monster Ribbon_Pig = new Monster("Ribbon_Pig",6000, 6000, 720, 300, 2500, 1800, 5, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	Monster Goblin= new Monster("Goblin", 10000, 10000, 999, 500, 1500, 3000, 6, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
 	
-	Monster Goblin_Hop = new Monster("Goblin_Hop", 1270, 1270, 100, 26, 1700, 1100, 7, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	Monster Goblin_Hop = new Monster("Goblin_Hop", 14000, 14000, 1200, 1000, 1700, 8000, 7, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
 	
-	Monster Skeleton  = new Monster("Skeleton", 1670, 1670, 120, 36, 2000, 1300, 8, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
-	Monster Hapi = new Monster("Hapi", 2100, 2100, 140, 58, 2200, 1400, 9, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	Monster Skeleton  = new Monster("Skeleton", 76000, 76000, 2600, 1500, 102000, 17000, 8, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	Monster Hapi = new Monster("Hapi", 115000, 115000, 6000, 5000, 2200, 1400, 9, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
 	
-	Monster Baby_Dragon  = new Monster("Baby_Dragon", 2500, 2500, 150, 70, 2500, 1500, 10, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
+	Monster Baby_Dragon  = new Monster("Baby_Dragon", 200000, 200000, 9000, 6670, 40000, 50000, 10, "물기",(HpPotion) smallHpItem,(MpPotion) smallMpItem);
 	
 	
 	
